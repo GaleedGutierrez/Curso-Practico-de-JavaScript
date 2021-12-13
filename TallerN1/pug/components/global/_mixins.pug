@@ -23,11 +23,36 @@ mixin theme-color-bar-navigator(color)
 mixin favicon-navigator(favicon, typeImage)
     link(rel="shortcut icon", href="https://drive.google.com/uc?id="+favicon, type="image/"+typeImage)
 
-mixin selection-charts(srcImgGray, srcImgWhite, altImg, figure, forLabel, idImg)  
+mixin selection-charts(figureType, figureName, forLabel)  
     label(for=forLabel).main__box-figures-label
         input(type="checkbox", name=forLabel, id=forLabel).main__box-figures-input
         .main__box-figures-container
-            figure.box-figures__figure-single
-                img(id=idImg src="https://drive.google.com/uc?id="+srcImgGray, alt=altImg).box-figures__image-gray
-                img(id=idImg src="https://drive.google.com/uc?id="+srcImgWhite, alt=altImg).box-figures__image-white
-            p.box-figures__type=figure
+            +geometric-figures(figureType)
+            p.box-figures__type=figureName
+
+
+mixin geometric-figures(figureType)
+    case figureType
+        when "square"
+            .figure-selector__square.figure-selector__square--white 
+        when "triangle"
+            .figure-selector__triangle.figure-selector__triangle--white
+        when "circle"
+            .figure-selector__circle.figure-selector__circle--white
+        when "rectangle"
+            .figure-selector__rectangle.figure-selector__rectangle--white
+        when "parallelogram"
+            .figure-selector__parallelogram.figure-selector__parallelogram--white
+        when "diamond"
+            .figure-selector__diamond.figure-selector__diamond--white
+        when "trapeze"
+            .figure-selector__trapeze.figure-selector__trapeze--white
+        when "hexagon"
+            .figure-selector__hexagon.figure-selector__hexagon--white
+
+mixin measurement-tables(title, labelFor)
+    .insert-dimensions__box
+        h3.insert-dimensions__box-title=title
+        form(action="") 
+            label(for=labelFor) 
+                input(type="number", name=labelFor, id=labelFor)

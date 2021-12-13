@@ -1,5 +1,7 @@
 @import "./components/global/global";
 @import "./components/global/header";
+@import "./components/geometric-figures/geometric-figures";
+
 
 .main__figure-selector-container {
     width: 100%;
@@ -39,28 +41,13 @@
     border: 0.1rem solid $warm-gray;
     border-radius: $border-radius-boxes;
     box-shadow: $boxes-shadow;
+    @include transition-boxes-geometric-figures;
 }
 
 .main__box-figures-input:checked + .main__box-figures-container {
     color: $just-white;
     border-color: $bitcoin-orange;
     background-color: $bitcoin-orange;
+    @include transition-boxes-geometric-figures;
 }
 
-.main__box-figures-input:checked + .main__box-figures-container .box-figures__image-white{
-    opacity: 1;
-}
-
-.box-figures__figure-single {
-    position: relative;
-    width: 4.8rem;
-}
-
-.box-figures__image-white {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    opacity: 0;
-}
