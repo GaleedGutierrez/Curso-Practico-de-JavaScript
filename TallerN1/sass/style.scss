@@ -1,2 +1,66 @@
 @import "./components/global/global";
 @import "./components/global/header";
+
+.main__figure-selector-container {
+    width: 100%;
+    height: 27.5rem;
+    padding: 5.2rem 1.2rem;
+}
+
+.main__box-figures-label {
+    position: relative;
+}
+
+.main__box-figures-input {
+    position: absolute;
+    z-index: 1;
+    width: 10.4rem;
+    height: 10.9rem;
+    opacity: 0;
+}
+
+.main__figure-selector {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 10.4rem);
+    grid-template-rows: 10.9rem;
+    gap: 1.2rem;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.main__box-figures-container {
+    display: grid;
+    justify-items: center;
+    align-items: space-between;
+    gap: 1.6rem;
+    padding: 1.2rem 0;
+    border: 0.1rem solid $warm-gray;
+    border-radius: $border-radius-boxes;
+    box-shadow: $boxes-shadow;
+}
+
+.main__box-figures-input:checked + .main__box-figures-container {
+    color: $just-white;
+    border-color: $bitcoin-orange;
+    background-color: $bitcoin-orange;
+}
+
+.main__box-figures-input:checked + .main__box-figures-container .box-figures__image-white{
+    opacity: 1;
+}
+
+.box-figures__figure-single {
+    position: relative;
+    width: 4.8rem;
+}
+
+.box-figures__image-white {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+}

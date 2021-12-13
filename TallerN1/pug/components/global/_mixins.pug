@@ -22,3 +22,12 @@ mixin theme-color-bar-navigator(color)
 
 mixin favicon-navigator(favicon, typeImage)
     link(rel="shortcut icon", href="https://drive.google.com/uc?id="+favicon, type="image/"+typeImage)
+
+mixin selection-charts(srcImgGray, srcImgWhite, altImg, figure, forLabel, idImg)  
+    label(for=forLabel).main__box-figures-label
+        input(type="checkbox", name=forLabel, id=forLabel).main__box-figures-input
+        .main__box-figures-container
+            figure.box-figures__figure-single
+                img(id=idImg src="https://drive.google.com/uc?id="+srcImgGray, alt=altImg).box-figures__image-gray
+                img(id=idImg src="https://drive.google.com/uc?id="+srcImgWhite, alt=altImg).box-figures__image-white
+            p.box-figures__type=figure
