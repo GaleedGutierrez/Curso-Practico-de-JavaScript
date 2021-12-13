@@ -1,0 +1,34 @@
+.header {
+    position: relative;
+    width: 100%;
+}
+
+.header__logo-title-container {
+    gap: 1.2rem;
+    width: 100%;
+    height: 12rem;
+    background: linear-gradient(78.85deg, $bitcoin-orange 5.81%, $warm-black 100.08%);
+    @include all-center-flex;
+}
+
+.header__logo {
+    width: 6.846rem;
+    height: 7.1rem;
+}
+
+.header__title {
+    color: $just-white;
+}
+
+.header__subtitle {
+    position: absolute;
+    top: calc(100% - 2rem);
+    left: calc(50% - 17.25rem);
+    width: 34.5rem;
+    padding: 1.2rem;
+    font-weight: bold;
+    font-size: $xx-small;
+    border-radius: 0.8rem;
+    background-color: $off-white;
+    @include shadow-boxs;
+}

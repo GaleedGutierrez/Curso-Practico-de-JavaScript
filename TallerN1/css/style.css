@@ -1,0 +1,74 @@
+h1 {
+    font-size: 2.6rem;
+}
+
+p {
+    font-size: 1.4rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    outline: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+}
+
+img,
+svg {
+    width: 100%;
+}
+
+.header {
+    position: relative;
+    width: 100%;
+}
+
+.header__logo-title-container {
+    gap: 1.2rem;
+    width: 100%;
+    height: 12rem;
+    background: linear-gradient(78.85deg, #F7931A 5.81%, #201E1C 100.08%);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.header__logo {
+    width: 6.846rem;
+    height: 7.1rem;
+}
+
+.header__title {
+    color: #FFFFFF;
+}
+
+.header__subtitle {
+    position: absolute;
+    top: calc(100% - 2rem);
+    left: calc(50% - 17.25rem);
+    width: 34.5rem;
+    padding: 1.2rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-radius: 0.8rem;
+    background-color: #FAF8F7;
+    -webkit-box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+            box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+}

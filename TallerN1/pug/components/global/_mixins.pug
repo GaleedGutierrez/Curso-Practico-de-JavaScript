@@ -1,0 +1,24 @@
+mixin titles(title)
+    title=title 
+
+mixin favicon(favicon, typeFavicon)
+    link(rel="shortcut icon" href=favicon type="image/"+typeFavicon) 
+
+mixin style-head(style)
+    link(rel="stylesheet", href="../css/"+style)
+
+mixin style-head-responsive(stylesResponsive, screen) 
+    link(rel="stylesheet", href="../css/"+stylesResponsive media="screen and (min-width:" +screen+"px)")
+
+mixin style-animations(animation)
+    link(rel="stylesheet", href="../css/"+animation media="screen and (prefers-reduced-motion: no-preference)")
+
+mixin figure-img(srcImg, altImg)
+    figure(class!=attributes.class)
+        img(src="https://drive.google.com/uc?id="+srcImg, alt=altImg)
+
+mixin theme-color-bar-navigator(color)
+    meta(name="theme-color" content=color)
+
+mixin favicon-navigator(favicon, typeImage)
+    link(rel="shortcut icon", href="https://drive.google.com/uc?id="+favicon, type="image/"+typeImage)
