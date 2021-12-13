@@ -1,6 +1,7 @@
 @import "./colors";
 @import "./typography";
 @import "./mixins";
+@import "./variablesSass";
 
 * {
     margin: 0;
@@ -17,6 +18,8 @@ html {
 
 body {
     font-family: $font-primary;
+    min-width: 36rem;
+    background-color: $off-white;
 }
 
 img,

@@ -40,3 +40,16 @@ const pi = Math.PI;
 console.group("Circle");
 
 console.groupEnd();
+
+// function changeImg() {
+//     const inputCheckbox = document.getElementById("selectSquareBox");
+//     const srcImag = document.getElementById("selectSquareImg");
+//     if (inputCheckbox.checked) {
+//         srcImag.src = `${imgUrlGoogleDrive}1ZhsLHLfJt9bpsuYbKVQ_eRk-P8VSmHoI`;
+//     }
+//     else {
+//         srcImag.src = `${imgUrlGoogleDrive}1WlGVAF-hc09y8zUUFX2wB7GXGyUvE0_K`;
+//     }
+// }
+
+const imgUrlGoogleDrive = "https://drive.google.com/uc?id="
