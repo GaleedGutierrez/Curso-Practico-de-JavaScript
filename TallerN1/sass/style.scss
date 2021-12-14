@@ -1,6 +1,7 @@
 @import "./components/global/global";
 @import "./components/global/header";
 @import "./components/geometric-figures/geometric-figures";
+@import "./components/measurement-tables/measuremnet-tables";
 
 
 .main__figure-selector-container {
@@ -51,3 +52,22 @@
     @include transition-boxes-geometric-figures;
 }
 
+.main__insert-dimensions {
+    position: relative;
+    padding: 5.2rem 2.8rem 3.2rem;
+    text-align: center;
+    color: $bitcoin-orange;
+    background-color: $warm-black;
+}
+
+.main__cube3d {
+    position: absolute;
+    bottom: calc(100% - 2.0005rem);
+    right: calc(50% - 1.75rem);
+    width: 3.5rem;
+    height: 4.001rem;
+}
+
+.insert-dimensions__title {
+    margin-block-end: 3.2rem;
+}

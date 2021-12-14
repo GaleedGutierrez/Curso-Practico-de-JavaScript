@@ -53,6 +53,6 @@ mixin geometric-figures(figureType)
 mixin measurement-tables(title, labelFor)
     .insert-dimensions__box
         h3.insert-dimensions__box-title=title
-        form(action="") 
-            label(for=labelFor) 
-                input(type="number", name=labelFor, id=labelFor)
+        form(action="" onsubmit="return false").insert-dimensions__form 
+            label(for=labelFor).insert-dimensions__label 
+                input(type="number", name=labelFor, id=labelFor).insert-dimensions__input

@@ -2,6 +2,14 @@ h1 {
     font-size: 2.6rem;
 }
 
+h2 {
+    font-size: 2.4rem;
+}
+
+h3 {
+    font-size: 2.2rem;
+}
+
 p {
     font-size: 1.4rem;
 }
@@ -14,6 +22,7 @@ p {
     list-style: none;
     text-decoration: none;
     outline: none;
+    border: none;
 }
 
 html {
@@ -201,6 +210,47 @@ svg {
             margin-block-start: 1.65rem;
 }
 
+.insert-dimensions__tables-container {
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 25.6rem);
+    grid-auto-rows: 10.3rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    gap: 1.2rem;
+}
+
+.insert-dimensions__box {
+    padding: 1.2rem;
+    border-radius: 0.8rem;
+    background-color: #494949;
+}
+
+.insert-dimensions__box-title {
+    font-weight: 500;
+    color: #FFFFFF;
+    text-align: start;
+}
+
+.insert-dimensions__form {
+    -webkit-padding-before: 1.2rem;
+            padding-block-start: 1.2rem;
+}
+
+.insert-dimensions__input {
+    font-weight: 500;
+    font-size: 2.2rem;
+    text-align: center;
+    color: #FFFFFF;
+    width: 23.2rem;
+    height: 3.6rem;
+    padding: 0 1.2rem;
+    border-radius: 0.8rem;
+    background-color: #333333;
+}
+
 .main__figure-selector-container {
     width: 100%;
     height: 27.5rem;
@@ -261,4 +311,25 @@ svg {
     transition-property: all;
     -webkit-transition-duration: 400ms;
             transition-duration: 400ms;
+}
+
+.main__insert-dimensions {
+    position: relative;
+    padding: 5.2rem 2.8rem 3.2rem;
+    text-align: center;
+    color: #F7931A;
+    background-color: #201E1C;
+}
+
+.main__cube3d {
+    position: absolute;
+    bottom: calc(100% - 2.0005rem);
+    right: calc(50% - 1.75rem);
+    width: 3.5rem;
+    height: 4.001rem;
+}
+
+.insert-dimensions__title {
+    -webkit-margin-after: 3.2rem;
+            margin-block-end: 3.2rem;
 }
