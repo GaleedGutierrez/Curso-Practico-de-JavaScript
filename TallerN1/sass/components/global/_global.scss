@@ -11,6 +11,7 @@
     text-decoration: none;
     outline: none;
     border: none;
+    font-family: $font-primary;
 
     &::placeholder {
         font-family: $font-primary;
@@ -23,6 +24,7 @@ html {
 
 body {
     font-family: $font-primary;
+    color: $warm-black;
     min-width: 36rem;
     background-color: $off-white;
 }

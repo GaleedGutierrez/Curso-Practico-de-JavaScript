@@ -5,7 +5,7 @@
     justify-content: center;
     width: 100%;
     gap: 1.2rem;
-} 
+}
 
 .insert-dimensions__box {
     padding: 1.2rem;
@@ -47,4 +47,32 @@
 
 .visible {
     display: grid;
+}
+
+.results-boxes-container {
+    @extend .insert-dimensions__tables-container;
+}
+
+.result-box {
+    @extend .insert-dimensions__box;
+    background-color: $just-white;
+    box-shadow: $boxes-shadow;
+}
+
+.insert-dimensions__box-title--black {
+    color: $warm-black;
+}
+
+.insert-dimensions__results {
+    @extend .insert-dimensions__input;
+    color: rgba($warm-gray, 0.4);
+    margin-block-start: 1.2rem;
+    border: 0.1rem solid $bitcoin-orange;
+    background-color: $off-white;
+    box-shadow: none;
+    @include all-center-flex;
+}
+
+.insert-dimensions__results--black {
+    color: $warm-black;
 }

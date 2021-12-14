@@ -18,6 +18,7 @@ block main
         section.main__insert-dimensions
             +figure-img("1-33Ss5JWknwDMMEbcyUivr_nhpGwUDpE", "Cube icon").main__cube3d
             h2.insert-dimensions__title Medidas
+            h2#select-figure-text.insert-dimensions__select-figure Seleccione una figura de arriba para empezar
             #measurement-square.insert-dimensions__square.insert-dimensions__tables-container.hidden
                 +measurement-tables("Lados", "measurement-square-input")
             #measurement-triangle.insert-dimensions__triangle.insert-dimensions__tables-container.hidden 
@@ -46,4 +47,14 @@ block main
                 +measurement-tables("Lados", "measurement-polygon-input")
                 +measurement-tables("Apotema", "measurement-polygon-input")
                 +measurement-tables("Número de lados", "measurement-polygon-input")
+            h2.insert-dimensions__title--calculate Calcular
+            form(action="" onsubmit="return false").insert-dimensions__form-calculate-dimentions
+                +buttons-calculate("inputCalcuparePerimeter", "Perímetro")
+                +buttons-calculate("inputCalcupareArea", "Área")
+        section.main__results 
+            h2.results__title  Resultados
+            .results-boxes-container
+                +box-results("Perímetro", "result-perimeter")
+                +box-results("Área", "result-area")
+            p.results__clasify La “u” significa unidad de medida y corresponde a la que usted esté usando.  
 

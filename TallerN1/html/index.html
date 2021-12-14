@@ -85,6 +85,7 @@
       <section class="main__insert-dimensions">
         <figure class="main__cube3d"><img src="https://drive.google.com/uc?id=1-33Ss5JWknwDMMEbcyUivr_nhpGwUDpE" alt="Cube icon"/></figure>
         <h2 class="insert-dimensions__title">Medidas</h2>
+        <h2 class="insert-dimensions__select-figure" id="select-figure-text">Seleccione una figura de arriba para empezar</h2>
         <div class="insert-dimensions__square insert-dimensions__tables-container hidden" id="measurement-square">
           <div class="insert-dimensions__box">
             <h3 class="insert-dimensions__box-title">Lados</h3>
@@ -261,9 +262,34 @@
             </form>
           </div>
         </div>
+        <h2 class="insert-dimensions__title--calculate">Calcular</h2>
+        <form class="insert-dimensions__form-calculate-dimentions" action="" onsubmit="return false">
+          <label for="inputCalcuparePerimeter"> 
+            <input class="insert-dimensions__calculate-dimentions" type="submit" value="Perímetro" id="inputCalcuparePerimeter"/>
+          </label>
+          <label for="inputCalcupareArea"> 
+            <input class="insert-dimensions__calculate-dimentions" type="submit" value="Área" id="inputCalcupareArea"/>
+          </label>
+        </form>
+      </section>
+      <section class="main__results"> 
+        <h2 class="results__title"> Resultados</h2>
+        <div class="results-boxes-container">
+          <div class="insert-dimensions__box result-box">
+            <h3 class="insert-dimensions__box-title insert-dimensions__box-title--black">Perímetro</h3>
+            <p class="insert-dimensions__results" id="result-perimeter">Resultado</p>
+          </div>
+          <div class="insert-dimensions__box result-box">
+            <h3 class="insert-dimensions__box-title insert-dimensions__box-title--black">Área</h3>
+            <p class="insert-dimensions__results" id="result-area">Resultado</p>
+          </div>
+        </div>
+        <p class="results__clasify">La “u” significa unidad de medida y corresponde a la que usted esté usando.  </p>
       </section>
     </main>
-    <footer class="footer"></footer>
+    <footer class="footer">
+      <p class="footer__crator">Crado por Galeed Gutierrez</p>
+    </footer>
     <script src="../js/figuras.js"> </script>
   </body>
 </html>

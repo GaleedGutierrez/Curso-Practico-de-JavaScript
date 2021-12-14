@@ -55,3 +55,13 @@ mixin measurement-tables(title, labelFor)
         form(action="" onsubmit="return false").insert-dimensions__form 
             label(for=labelFor).insert-dimensions__label 
                 input(type="number", name=labelFor, id=labelFor, placeholder="Medida").insert-dimensions__input
+
+
+mixin buttons-calculate(forLabel, valueInput)
+    label(for=forLabel) 
+        input(type="submit", value=valueInput id=forLabel).insert-dimensions__calculate-dimentions
+
+mixin box-results(title, idP)
+    .insert-dimensions__box.result-box
+        h3.insert-dimensions__box-title.insert-dimensions__box-title--black=title
+        p.insert-dimensions__results(id=idP) Resultado

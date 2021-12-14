@@ -23,6 +23,7 @@ p {
     text-decoration: none;
     outline: none;
     border: none;
+    font-family: "DM Sans", sans-serif;
 }
 *::-webkit-input-placeholder {
     font-family: "DM Sans", sans-serif;
@@ -46,6 +47,7 @@ html {
 
 body {
     font-family: "DM Sans", sans-serif;
+    color: #201E1C;
     min-width: 36rem;
     background-color: #FAF8F7;
 }
@@ -104,6 +106,22 @@ svg {
     background-color: #FAF8F7;
     -webkit-box-shadow: 0rem 0.4rem 0.8rem rgba(89, 73, 30, 0.16);
             box-shadow: 0rem 0.4rem 0.8rem rgba(89, 73, 30, 0.16);
+}
+
+.footer {
+    color: #FFFFFF;
+    width: 100%;
+    height: 4.2rem;
+    background-color: #F7931A;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .main__box-figures-input:checked + .main__box-figures-container .figure-selector__square--white,
@@ -225,7 +243,7 @@ svg {
             margin-block-start: 1.65rem;
 }
 
-.insert-dimensions__tables-container {
+.insert-dimensions__tables-container, .results-boxes-container {
     display: -ms-grid;
     display: grid;
     grid-template-columns: repeat(auto-fit, 25.6rem);
@@ -237,7 +255,7 @@ svg {
     gap: 1.2rem;
 }
 
-.insert-dimensions__box {
+.insert-dimensions__box, .result-box {
     padding: 1.2rem;
     border-radius: 0.8rem;
     background-color: #494949;
@@ -256,7 +274,7 @@ svg {
             padding-block-start: 1.2rem;
 }
 
-.insert-dimensions__input {
+.insert-dimensions__input, .insert-dimensions__results {
     font-weight: 500;
     font-size: 2.2rem;
     text-align: center;
@@ -269,19 +287,19 @@ svg {
     -webkit-box-shadow: 0rem 0.4rem 0.8rem rgba(0, 0, 0, 0.25);
             box-shadow: 0rem 0.4rem 0.8rem rgba(0, 0, 0, 0.25);
 }
-.insert-dimensions__input::-webkit-input-placeholder {
+.insert-dimensions__input::-webkit-input-placeholder, .insert-dimensions__results::-webkit-input-placeholder {
     color: rgba(186, 186, 186, 0.4);
 }
-.insert-dimensions__input::-moz-placeholder {
+.insert-dimensions__input::-moz-placeholder, .insert-dimensions__results::-moz-placeholder {
     color: rgba(186, 186, 186, 0.4);
 }
-.insert-dimensions__input:-ms-input-placeholder {
+.insert-dimensions__input:-ms-input-placeholder, .insert-dimensions__results:-ms-input-placeholder {
     color: rgba(186, 186, 186, 0.4);
 }
-.insert-dimensions__input::-ms-input-placeholder {
+.insert-dimensions__input::-ms-input-placeholder, .insert-dimensions__results::-ms-input-placeholder {
     color: rgba(186, 186, 186, 0.4);
 }
-.insert-dimensions__input::placeholder {
+.insert-dimensions__input::placeholder, .insert-dimensions__results::placeholder {
     color: rgba(186, 186, 186, 0.4);
 }
 
@@ -292,6 +310,39 @@ svg {
 .visible {
     display: -ms-grid;
     display: grid;
+}
+
+.result-box {
+    background-color: #FFFFFF;
+    -webkit-box-shadow: 0rem 0.4rem 0.8rem rgba(89, 73, 30, 0.16);
+            box-shadow: 0rem 0.4rem 0.8rem rgba(89, 73, 30, 0.16);
+}
+
+.insert-dimensions__box-title--black {
+    color: #201E1C;
+}
+
+.insert-dimensions__results {
+    color: rgba(186, 186, 186, 0.4);
+    -webkit-margin-before: 1.2rem;
+            margin-block-start: 1.2rem;
+    border: 0.1rem solid #F7931A;
+    background-color: #FAF8F7;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.insert-dimensions__results--black {
+    color: #201E1C;
 }
 
 .main__figure-selector-container {
@@ -357,6 +408,8 @@ svg {
 }
 
 .main__insert-dimensions {
+    display: -ms-grid;
+    display: grid;
     position: relative;
     padding: 5.2rem 2.8rem 3.2rem;
     text-align: center;
@@ -375,4 +428,52 @@ svg {
 .insert-dimensions__title {
     -webkit-margin-after: 3.2rem;
             margin-block-end: 3.2rem;
+}
+
+.insert-dimensions__select-figure {
+    -webkit-margin-after: 1.6rem;
+            margin-block-end: 1.6rem;
+    color: #FFFFFF;
+}
+
+.insert-dimensions__title--calculate {
+    margin: 1.6rem 0;
+}
+
+.insert-dimensions__form-calculate-dimentions {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 3.2rem;
+    width: 100%;
+}
+
+.insert-dimensions__calculate-dimentions {
+    font-size: 2.4rem;
+    color: #FFFFFF;
+    width: 13.6rem;
+    padding: 1.2rem;
+    border-radius: 0.8rem;
+    background-color: #F7931A;
+}
+.insert-dimensions__calculate-dimentions:active {
+    background-color: #b96f13;
+}
+
+.main__results {
+    text-align: center;
+    padding: 5.2rem 4.4rem 2rem;
+}
+
+.results__title {
+    -webkit-margin-after: 2.8rem;
+            margin-block-end: 2.8rem;
+}
+
+.results__clasify {
+    -webkit-margin-before: 2rem;
+            margin-block-start: 2rem;
 }
