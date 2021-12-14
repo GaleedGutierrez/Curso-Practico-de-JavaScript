@@ -11,6 +11,10 @@
     text-decoration: none;
     outline: none;
     border: none;
+
+    &::placeholder {
+        font-family: $font-primary;
+    }
 }
 
 html {

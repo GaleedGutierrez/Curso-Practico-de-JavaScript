@@ -4,7 +4,7 @@
 .main__box-figures-input:checked+.main__box-figures-container .figure-selector__parallelogram--white,
 .main__box-figures-input:checked+.main__box-figures-container .figure-selector__diamond--white,
 .main__box-figures-input:checked+.main__box-figures-container .figure-selector__trapeze--white,
-.main__box-figures-input:checked+.main__box-figures-container .figure-selector__hexagon--white {
+.main__box-figures-input:checked+.main__box-figures-container .figure-selector__polygon--white {
     background-color: $just-white;
     transition-property: background-color;
     transition-duration: $transition-duration-box-figures;
@@ -67,7 +67,7 @@
     transform: perspective(1.2rem) rotateX(9deg);
 }
 
-.figure-selector__hexagon {
+.figure-selector__polygon {
     position: relative;
     top: 1.1rem;
     width: 5.5rem;
@@ -103,6 +103,6 @@
     }
 }
 
-.figure-selector__hexagon + .box-figures__type {
+.figure-selector__polygon + .box-figures__type {
     margin-block-start: 1.65rem;
 }
