@@ -23,13 +23,12 @@ mixin theme-color-bar-navigator(color)
 mixin favicon-navigator(favicon, typeImage)
     link(rel="shortcut icon", href="https://drive.google.com/uc?id="+favicon, type="image/"+typeImage)
 
-mixin selection-charts(figureType, figureName, forLabel)  
+mixin selection-charts(figureType, figureName, forLabel, valueRadio, idInput)  
     label(for=forLabel).main__box-figures-label
-        input(type="checkbox", name=forLabel, id=forLabel).main__box-figures-input
+        input(type="radio", name=forLabel, id=idInput, value=valueRadio,onclick="addingDimensionBoxes()").main__box-figures-input
         .main__box-figures-container
             +geometric-figures(figureType)
             p.box-figures__type=figureName
-
 
 mixin geometric-figures(figureType)
     case figureType
@@ -47,12 +46,22 @@ mixin geometric-figures(figureType)
             .figure-selector__diamond.figure-selector__diamond--white
         when "trapeze"
             .figure-selector__trapeze.figure-selector__trapeze--white
-        when "hexagon"
-            .figure-selector__hexagon.figure-selector__hexagon--white
+        when "polygon"
+            .figure-selector__polygon.figure-selector__polygon--white
 
 mixin measurement-tables(title, labelFor)
     .insert-dimensions__box
         h3.insert-dimensions__box-title=title
-        form(action="") 
-            label(for=labelFor) 
-                input(type="number", name=labelFor, id=labelFor)
+        form(action="" onsubmit="return false").insert-dimensions__form 
+            label(for=labelFor).insert-dimensions__label 
+                input(type="number", name=labelFor, id=labelFor, placeholder="Medida").insert-dimensions__input
+
+
+mixin buttons-calculate(forLabel, valueInput)
+    label(for=forLabel) 
+        input(type="submit", value=valueInput id=forLabel).insert-dimensions__calculate-dimentions
+
+mixin box-results(title, idP)
+    .insert-dimensions__box.result-box
+        h3.insert-dimensions__box-title.insert-dimensions__box-title--black=title
+        p.insert-dimensions__results(id=idP) Resultado

@@ -1,6 +1,8 @@
 @import "./components/global/global";
 @import "./components/global/header";
+@import "./components/global/footer";
 @import "./components/geometric-figures/geometric-figures";
+@import "./components/measurement-tables/measuremnet-tables";
 
 
 .main__figure-selector-container {
@@ -51,3 +53,66 @@
     @include transition-boxes-geometric-figures;
 }
 
+.main__insert-dimensions {
+    display: grid;
+    position: relative;
+    padding: 5.2rem 2.8rem 3.2rem;
+    text-align: center;
+    color: $bitcoin-orange;
+    background-color: $warm-black;
+}
+
+.main__cube3d {
+    position: absolute;
+    bottom: calc(100% - 2.0005rem);
+    right: calc(50% - 1.75rem);
+    width: 3.5rem;
+    height: 4.001rem;
+}
+
+.insert-dimensions__title {
+    margin-block-end: 3.2rem;
+}
+
+.insert-dimensions__select-figure {
+    margin-block-end: 1.6rem;
+    color: $just-white;
+}
+
+.insert-dimensions__title--calculate {
+    margin: 1.6rem 0;
+}
+
+.insert-dimensions__form-calculate-dimentions{
+    display: flex;
+    justify-content: center;
+    gap: 3.2rem;
+    width: 100%;
+}
+
+.insert-dimensions__calculate-dimentions {
+    font-size: $large;
+    color: $just-white;
+    width: 13.6rem;
+    padding: 1.2rem;
+    border-radius: $border-radius-boxes;
+    background-color: $bitcoin-orange;
+
+    &:active {
+        background-color: $bitcoin-orange-dark;
+    }
+}
+
+.main__results {
+    text-align: center;
+    padding: 5.2rem 4.4rem 2rem;
+}
+
+.results__title {
+    margin-block-end: 2.8rem;
+}
+
+
+.results__clasify {
+    margin-block-start: 2rem;
+}
