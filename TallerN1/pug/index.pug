@@ -1,7 +1,8 @@
 extend ./components/global/_global.pug
 block head
     +style-head("../css/style.css")
-    //- +style-head-responsive("homepage/desktop.css", "800")
+    +style-head-responsive("../css/tablet.css", "1024")
+    +style-head-responsive("../css/desktop.css", "1280")
     +titles("Figuras geométricas")
 block main
     main.main
