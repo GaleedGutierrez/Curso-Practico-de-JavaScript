@@ -1,96 +1,8 @@
-// Functions squeare
-function calculateSquarePerimeter() {
-    const input = document.getElementById("InputSquare");
-    const value = input.value;
-    const perimeter = squarePerimeter(value);
-    alert(perimeter);
-}
-
-function calculateSquareArea() {
-    const input = document.getElementById("InputSquare");
-    const value = input.value;
-    const area = squareArea(value);
-    alert(area);
-}
-
-const squarePerimeter = (side) => side * 4;
-const squareArea = (side) => side ** 2;
-
-// Functions triangle
-const trianglePerimeter = (side1, side2, base) => side1 + side2 + base;
-const triangleArea = (base, height) => (base * height) / 2;
-
-// Functions circle
-const circleDiameter = (radio) => 2 * radio;
-const circumference = (radio) => pi * circleDiameter(radio);
-const circleArea = (radio) => pi * radio ** 2;
-
-// Code square
-// console.group("Square");
-
-// console.groupEnd();
-
-// Código del triangulo.
-// console.group("Triangle");
-
-// console.groupEnd();
-
-// Código del circulo.
-const pi = Math.PI;
-// console.group("Circle");
-
-// console.groupEnd();
-
-const imgUrlGoogleDrive = "https://drive.google.com/uc?id=";
-
 function addingDimensionBoxes() {
     let selectedFigure = {};
-    
+    let figures = figuresOptions();
+    let boxesDimentions = boxesDimentionsFigures();
     hiddenTextStart();
-
-    const boxSquare = document.getElementById("measurement-square");
-    const boxTriangle = document.getElementById("measurement-triangle");
-    const boxCircle = document.getElementById("measurement-circle");
-    const boxRectangle = document.getElementById("measurement-rectangle");
-    const boxParallelogram = document.getElementById(
-        "measurement-parallelogram"
-    );
-    const boxDiamond = document.getElementById("measurement-diamond");
-    const boxTrapeze = document.getElementById("measurement-trapeze");
-    const boxPolygon = document.getElementById("measurement-polygon");
-
-    const boxesDimentions = [
-        boxSquare,
-        boxTriangle,
-        boxCircle,
-        boxRectangle,
-        boxParallelogram,
-        boxDiamond,
-        boxTrapeze,
-        boxPolygon,
-    ];
-
-    const squareSelected = document.getElementById("squareFigure");
-    const triangleSelected = document.getElementById("triangleFigure");
-    const circleSelected = document.getElementById("circleFigure");
-    const rectangleSelected = document.getElementById("rectangleFigure");
-    const parallelogramSelected = document.getElementById(
-        "parallelogramFigure"
-    );
-    const diamondSelected = document.getElementById("diamondFigure");
-    const trapezeSelected = document.getElementById("trapezeFigure");
-    const polygonSelected = document.getElementById("polygonFigure");
-
-    const figures = [
-        squareSelected,
-        triangleSelected,
-        circleSelected,
-        rectangleSelected,
-        parallelogramSelected,
-        diamondSelected,
-        trapezeSelected,
-        polygonSelected,
-    ];
 
     selectedFigure = seachFigureChecked(figures);
 
@@ -108,7 +20,8 @@ function hiddenTextStart() {
 function seachFigureChecked(figures) {
     let selectedFigure = {};
     for (let figure of figures)
-        if (figure.checked === true) return (selectedFigure = figure);
+        if (figure.checked === true) 
+            return (selectedFigure = figure);
 }
 
 function addHiddenBox(boxesDimentions) {
@@ -122,6 +35,14 @@ function addHiddenBox(boxesDimentions) {
 }
 
 function addVisibleBox(selectedFigure, boxesDimentions, figures) {
+    const resultPerimeter = document.getElementById("result-perimeter");
+    const resultArea = document.getElementById("result-area");
+    if(resultPerimeter.classList.contains("insert-dimensions__results--black"))
+        resultPerimeter.classList.remove("insert-dimensions__results--black");
+    if(resultArea.classList.contains("insert-dimensions__results--black"))
+        resultArea.classList.remove("insert-dimensions__results--black");
+
+
     switch (selectedFigure) {
         case figures[0]:
             boxesDimentions[0].classList.remove("hidden");
@@ -157,3 +78,57 @@ function addVisibleBox(selectedFigure, boxesDimentions, figures) {
             break;
     }
 }
+
+function figuresOptions() {
+    const squareSelected = document.getElementById("squareFigure");
+    const triangleSelected = document.getElementById("triangleFigure");
+    const circleSelected = document.getElementById("circleFigure");
+    const rectangleSelected = document.getElementById("rectangleFigure");
+    const parallelogramSelected = document.getElementById(
+        "parallelogramFigure"
+    );
+    const diamondSelected = document.getElementById("diamondFigure");
+    const trapezeSelected = document.getElementById("trapezeFigure");
+    const polygonSelected = document.getElementById("polygonFigure");
+
+    const figures = [
+        squareSelected,
+        triangleSelected,
+        circleSelected,
+        rectangleSelected,
+        parallelogramSelected,
+        diamondSelected,
+        trapezeSelected,
+        polygonSelected,
+    ];
+
+    return figures;
+}
+
+function boxesDimentionsFigures() {
+    const boxSquare = document.getElementById("measurement-square");
+    const boxTriangle = document.getElementById("measurement-triangle");
+    const boxCircle = document.getElementById("measurement-circle");
+    const boxRectangle = document.getElementById("measurement-rectangle");
+    const boxParallelogram = document.getElementById(
+        "measurement-parallelogram"
+    );
+    const boxDiamond = document.getElementById("measurement-diamond");
+    const boxTrapeze = document.getElementById("measurement-trapeze");
+    const boxPolygon = document.getElementById("measurement-polygon");
+
+    const boxesDimentions = [
+        boxSquare,
+        boxTriangle,
+        boxCircle,
+        boxRectangle,
+        boxParallelogram,
+        boxDiamond,
+        boxTrapeze,
+        boxPolygon,
+    ];
+
+    return boxesDimentions;
+}
+
+
