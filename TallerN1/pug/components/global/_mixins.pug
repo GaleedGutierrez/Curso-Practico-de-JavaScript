@@ -57,9 +57,9 @@ mixin measurement-tables(title, labelFor)
                 input(type="number", name=labelFor, id=labelFor, placeholder="Medida").insert-dimensions__input
 
 
-mixin buttons-calculate(forLabel, valueInput)
+mixin buttons-calculate(forLabel, valueInput, onclickInput)
     label(for=forLabel) 
-        input(type="submit", value=valueInput id=forLabel).insert-dimensions__calculate-dimentions
+        input(type="submit", value=valueInput, id=forLabel, onclick=onclickInput).insert-dimensions__calculate-dimentions
 
 mixin box-results(title, idP)
     .insert-dimensions__box.result-box
