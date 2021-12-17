@@ -6,3 +6,9 @@ Curso de Platzi.
 - Segundo: Imprementar las fórmulas en JavaScript.
 - Tercero: Crear funciones.
 - Cuarto: Integrar JavaScript en con HTML.
+
+## Taller N°2: Porcentajes y descuentos
+- Primer: definir las fórmulas.
+- Segundo: Imprementar las fórmulas en JavaScript.
+- Tercero: Crear funciones.
+- Cuarto: Integrar JavaScript en con HTML.
