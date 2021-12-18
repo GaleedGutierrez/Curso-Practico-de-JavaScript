@@ -6,18 +6,22 @@ function calculateDiscountedPrice(price, discount) {
     return discontedPrice;
 }
 
-// const originalPrice = 120;
-// const discount = 18;
+function startPriceDiscount() {
+    const inputPrice = document.getElementById("input-price");
+    const inputDiscount = document.getElementById("input-discount");
+    
+    
+    const price = parseFloat(inputPrice.value);
+    const discount = parseFloat(inputDiscount.value);
+    
+    const discountedPrice = calculateDiscountedPrice(price, discount);
+    
+    resultFinal(discountedPrice);
+}
 
+function resultFinal(discountedPrice) {
+    const result = document.getElementById("result-price");
+    result.innerText = `El precio final con descuento incluido es de $ ${discountedPrice}`;
+}   
 
-
-
-// console.group("");
-// console.log({
-//     originalPrice,
-//     originalPercentage,
-//     discount,
-//     percentageDiscountedPrice,
-//     discontedPrice
-// });
-// console.groupEnd();
+const result = document.getElementById("result-price");
