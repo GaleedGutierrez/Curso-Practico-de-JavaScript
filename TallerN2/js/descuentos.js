@@ -21,7 +21,7 @@ function startPriceDiscount() {
 
 function resultFinal(discountedPrice) {
     const result = document.getElementById("result-price");
-    result.innerText = `El precio final con descuento incluido es de $ ${discountedPrice}`;
+    result.innerText = `<h>El precio final con descuento incluido es de $ ${discountedPrice}</h`;
 }   
 
 const result = document.getElementById("result-price");
