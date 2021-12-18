@@ -1,11 +1,17 @@
 extend ./components/global/_global.pug
 block head
     +style-head("../css/style.css")
-    +style-head-responsive("../css/tablet.css", "1024")
-    +style-head-responsive("../css/desktop.css", "1280")
+    //- +style-head-responsive("../css/tablet.css", "1024")
+    //- +style-head-responsive("../css/desktop.css", "1280")
     +titles("Figuras geométricas")
 block main
     main.main
-        section.main__figure-selector-container
-        
+        section.main__subtotal-cupon-container
+            h2.main__subtotal-cupon-title Calcula el precio final de tu compra
+            .boxes-data-container 
+                +boxes-data-input("boxes-data-input--white", "boxes-data-input__input--orange", "boxes-data-input-title--black","number", "Subtotal", "subtotal-input", "Precio")
+        section.main__cupons-container
+            h3.main__cupons-title Selecione o ingrese un cupon
+            .boxes-data-container
+                +boxes-data-input("boxes-data-input--white", "boxes-data-input__input--orange", "boxes-data-input-title--black","text", "Cupon", "cupon-input", "TO1")
 

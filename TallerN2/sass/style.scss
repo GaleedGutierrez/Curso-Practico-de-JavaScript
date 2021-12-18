@@ -4,6 +4,47 @@
 @import "./components/geometric-figures/geometric-figures";
 @import "./components/measurement-tables/measuremnet-tables";
 
+.main {
+    padding: 3.6rem 3.2rem;
+}
+
+.main__subtotal-cupon-container {
+    text-align: center;
+    width: 100%;
+}
+
+.main__subtotal-cupon-title {
+    margin-block-end: 2.4rem;
+}
+
+.main__cupons-container {
+    margin-block-start: 2rem;
+}
+
+.main__cupons-title {
+    font-weight: bold;
+    margin-block-end: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .main__figure-selector-container {
     width: 100%;

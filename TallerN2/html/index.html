@@ -9,27 +9,46 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/../css/style.css"/>
-    <link rel="stylesheet" href="../css/../css/tablet.css" media="screen and (min-width:1024px)"/>
-    <link rel="stylesheet" href="../css/../css/desktop.css" media="screen and (min-width:1280px)"/>
     <title>Figuras geométricas</title>
   </head>
   <body>
     <header class="header">
       <section class="header__logo-container"> 
-        <figure><img src="https://drive.google.com/uc?id=1n_TDR3GiKGlotOtzsYUhFU-8oL-fjLj2" alt="Store icon"/></figure>
+        <figure class="header__logo-icon"><img src="https://drive.google.com/uc?id=1n_TDR3GiKGlotOtzsYUhFU-8oL-fjLj2" alt="Store icon"/></figure>
         <h1 class="header__title">Tienda Online</h1>
       </section>
       <p class="header__subtitle">Segundo taller del curso práctico de JavaScript</p>
     </header>
     <main class="main">
-      <section class="main__figure-selector-container"></section>
+      <section class="main__subtotal-cupon-container">
+        <h2 class="main__subtotal-cupon-title">Calcula el precio final de tu compra</h2>
+        <div class="boxes-data-container"> 
+          <div class="boxes-data-input boxes-data-input--white">
+            <h3 class="boxes-data-input-title boxes-data-input-title--black">Subtotal</h3>
+            <form class="boxes-data-input__form" action="" onsubmit="return false"> 
+              <label class="boxes-data-input__label" for="subtotal-input"> 
+                <input class="boxes-data-input__input--orange boxes-data-input__input" type="number" name="subtotal-input" id="subtotal-input" placeholder="Precio"/>
+              </label>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section class="main__cupons-container">
+        <h3 class="main__cupons-title">Selecione o ingrese un cupon</h3>
+        <div class="boxes-data-container">
+          <div class="boxes-data-input boxes-data-input--white">
+            <h3 class="boxes-data-input-title boxes-data-input-title--black">Cupon</h3>
+            <form class="boxes-data-input__form" action="" onsubmit="return false"> 
+              <label class="boxes-data-input__label" for="cupon-input"> 
+                <input class="boxes-data-input__input--orange boxes-data-input__input" type="text" name="cupon-input" id="cupon-input" placeholder="TO1"/>
+              </label>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="footer">
       <p class="footer__creator">Creado por Galeed Gutierrez</p>
     </footer>
-    <script src="../js/figuras.js"> </script>
-    <script src="../js/area.js"> </script>
-    <script src="../js/perimeter.js"> </script>
-    <script src="../js/results.js"> </script>
   </body>
 </html>

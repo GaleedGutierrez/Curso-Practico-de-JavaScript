@@ -7,7 +7,8 @@ h2 {
 }
 
 h3 {
-    font-size: 1.8rem;
+    font-size: 2rem;
+    font-weight: 500;
 }
 
 p {
@@ -236,64 +237,66 @@ svg {
             margin-block-start: 1.65rem;
 }
 
-.insert-dimensions__tables-container, .results-boxes-container {
+.boxes-data-container, .results-boxes-container {
     display: -ms-grid;
     display: grid;
-    grid-template-columns: repeat(auto-fit, 25.6rem);
-    grid-auto-rows: 10.3rem;
+    grid-template-columns: repeat(auto-fit, 24rem);
+    grid-auto-rows: 10.2rem;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    gap: 2rem;
     width: 100%;
-    gap: 1.2rem;
 }
 
-.insert-dimensions__box, .result-box {
-    padding: 1.2rem;
+.boxes-data-input {
+    padding: 1.2rem 1.2rem 1.6rem;
     border-radius: 0.8rem;
-    background-color: #494949;
-    -webkit-box-shadow: 0rem 0.4rem 0.8rem rgba(250, 248, 247, 0.08);
-            box-shadow: 0rem 0.4rem 0.8rem rgba(250, 248, 247, 0.08);
 }
 
-.insert-dimensions__box-title {
-    font-weight: 500;
-    color: #FFFFFF;
-    text-align: start;
+.boxes-data-input--white, .result-box {
+    background-color: #FFFFFF;
+    -webkit-box-shadow: 0rem 0.4rem 0.8rem rgba(89, 73, 30, 0.16);
+            box-shadow: 0rem 0.4rem 0.8rem rgba(89, 73, 30, 0.16);
 }
 
-.insert-dimensions__form {
+.boxes-data-input__form {
     -webkit-padding-before: 1.2rem;
             padding-block-start: 1.2rem;
 }
 
-.insert-dimensions__input, .insert-dimensions__results {
+.boxes-data-input__input, .insert-dimensions__results {
     font-weight: 500;
-    font-size: 1.8rem;
+    font-size: 2rem;
     text-align: center;
-    color: #FFFFFF;
-    width: 23.2rem;
+    width: 21.6rem;
     height: 3.6rem;
     padding: 0 1.2rem;
     border-radius: 0.8rem;
-    background-color: #333333;
-    -webkit-box-shadow: 0rem 0.4rem 0.8rem rgba(0, 0, 0, 0.25);
-            box-shadow: 0rem 0.4rem 0.8rem rgba(0, 0, 0, 0.25);
 }
-.insert-dimensions__input::-webkit-input-placeholder, .insert-dimensions__results::-webkit-input-placeholder {
+.boxes-data-input__input::-webkit-input-placeholder, .insert-dimensions__results::-webkit-input-placeholder {
     color: rgba(186, 186, 186, 0.4);
 }
-.insert-dimensions__input::-moz-placeholder, .insert-dimensions__results::-moz-placeholder {
+.boxes-data-input__input::-moz-placeholder, .insert-dimensions__results::-moz-placeholder {
     color: rgba(186, 186, 186, 0.4);
 }
-.insert-dimensions__input:-ms-input-placeholder, .insert-dimensions__results:-ms-input-placeholder {
+.boxes-data-input__input:-ms-input-placeholder, .insert-dimensions__results:-ms-input-placeholder {
     color: rgba(186, 186, 186, 0.4);
 }
-.insert-dimensions__input::-ms-input-placeholder, .insert-dimensions__results::-ms-input-placeholder {
+.boxes-data-input__input::-ms-input-placeholder, .insert-dimensions__results::-ms-input-placeholder {
     color: rgba(186, 186, 186, 0.4);
 }
-.insert-dimensions__input::placeholder, .insert-dimensions__results::placeholder {
+.boxes-data-input__input::placeholder, .insert-dimensions__results::placeholder {
     color: rgba(186, 186, 186, 0.4);
+}
+
+.boxes-data-input__input--orange {
+    border: 0.1rem solid #F7931A;
+    background-color: #FAF8F7;
+}
+
+.boxes-data-input-title {
+    text-align: start;
 }
 
 .hidden {
@@ -311,7 +314,7 @@ svg {
             box-shadow: 0rem 0.4rem 0.8rem rgba(89, 73, 30, 0.16);
 }
 
-.insert-dimensions__box-title--black {
+.boxes-data-input--white-title--black {
     color: #201E1C;
 }
 
@@ -336,6 +339,31 @@ svg {
 
 .insert-dimensions__results--black {
     color: #201E1C;
+}
+
+.main {
+    padding: 3.6rem 3.2rem;
+}
+
+.main__subtotal-cupon-container {
+    text-align: center;
+    width: 100%;
+}
+
+.main__subtotal-cupon-title {
+    -webkit-margin-after: 2.4rem;
+            margin-block-end: 2.4rem;
+}
+
+.main__cupons-container {
+    -webkit-margin-before: 2rem;
+            margin-block-start: 2rem;
+}
+
+.main__cupons-title {
+    font-weight: bold;
+    -webkit-margin-after: 2rem;
+            margin-block-end: 2rem;
 }
 
 .main__figure-selector-container {

@@ -30,12 +30,12 @@ mixin favicon-navigator(favicon, typeImage)
 //-             +geometric-figures(figureType)
 //-             p.box-figures__type=figureName
 
-mixin boxes-data-input(title, labelFor)
-    .boxes-data-input
-        h3.boxes-data-input-title=title
+mixin boxes-data-input(classContainer, classInput, classTitle,type, title, labelFor, placeholderInput)
+    .boxes-data-input(class=classContainer)
+        h3.boxes-data-input-title(class=classTitle)=title
         form(action="" onsubmit="return false").boxes-data-input__form 
             label(for=labelFor).boxes-data-input__label 
-                input(type="number", name=labelFor, id=labelFor, placeholder="Medida").boxes-data-input__input
+                input(type=type, name=labelFor, id=labelFor, placeholder=placeholderInput class=classInput).boxes-data-input__input
 
 
 mixin buttons-call-to-action-gral(forLabel, valueInput, onclickInput)
