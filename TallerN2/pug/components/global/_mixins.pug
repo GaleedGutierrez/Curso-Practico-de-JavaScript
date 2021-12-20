@@ -39,10 +39,16 @@ mixin boxes-data-input(classContainer, classInput, classTitle,type, title, label
 
 
 mixin buttons-call-to-action-gral(forLabel, valueInput, onclickInput)
-    label(for=forLabel).buttons-call-to-action-gral__label
-        input(type="submit", value=valueInput, id=forLabel, onclick=onclickInput).buttons-call-to-action-gral__input
+    label(for=forLabel).buttons-call-to-action-gral__label.cupons__buttons-label
+        input(type="ratio", value=valueInput, id=forLabel, onclick=onclickInput).buttons-call-to-action-gral__input.cupons__buttons-input
+
+mixin buttons-cupons(numberCupon, forLabel, valueInput, onclickInput)
+    .cupons__button-container
+        label(for=forLabel).buttons-call-to-action-gral__label.cupons__buttons-label
+            input(type="radio", name=forLabel, value=valueInput, id=forLabel, onclick=onclickInput).buttons-call-to-action-gral__input.cupons__buttons-input
+            p.cupons__cupon-1.buttons-cupon=numberCupon
 
 mixin boxes-results-final(title, idP)
-    .boxes-results-final
-        h3.boxes-results-final-title=title
-        p.boxes-results-final(id=idP) Resultado
+    .boxes-results-final.boxes-results-final--dark
+        h3.boxes-results-final-title.boxes-results-final-title--white=title
+        p.boxes-results-final__box-result.boxes-results-final__box-result--white(id=idP) Resultado
