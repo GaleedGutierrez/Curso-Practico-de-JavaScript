@@ -1,44 +1,70 @@
-.insert-dimensions__tables-container {
+.boxes-data-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 25.6rem);
-    grid-auto-rows: 10.3rem;
+    grid-template-columns: repeat(auto-fit, 24rem);
+    grid-auto-rows: 10.2rem;
     justify-content: center;
+    gap: 2rem;
     width: 100%;
-    gap: 1.2rem;
 }
 
-.insert-dimensions__box {
-    padding: 1.2rem;
+.boxes-data-input,
+.boxes-results-final {
+    padding: 1.2rem 1.2rem 1.6rem;
     border-radius: $border-radius-boxes;
-    background-color: $gray-plus-2;
-    box-shadow: $boxes-shadow3;
 }
 
-.insert-dimensions__box-title {
-    font-weight: 500;
-    color: $just-white;
-    text-align: start;
+.boxes-data-input--white {
+    background-color: $just-white;
+    box-shadow: $boxes-shadow;
 }
 
-.insert-dimensions__form {
-    padding-block-start: 1.2rem;
+.boxes-data-input__form,
+.boxes-results-final__box-result {
+    margin-block-start: 1.2rem;
 }
 
-.insert-dimensions__input {
+.boxes-data-input__input,
+.boxes-results-final__box-result {
     font-weight: 500;
     font-size: $medium;
     text-align: center;
-    color: $just-white;
-    width: 23.2rem;
+    width: 21.6rem;
     height: 3.6rem;
     padding: 0 1.2rem;
     border-radius: $border-radius-boxes;
-    background-color: $gray-plus-3;
-    box-shadow: $boxes-shadow2;
 
     &::placeholder {
         color: rgba($warm-gray, 0.4);
     }
+}
+
+.boxes-data-input__input--orange {
+    border: 0.1rem solid $bitcoin-orange;
+    background-color: $off-white;
+}
+
+.boxes-data-input-title {
+    text-align: start;
+}
+
+.boxes-results-final--dark {
+    background-color: $gray-plus-2;
+    color: $just-white;
+    box-shadow: $boxes-shadow3;
+}
+
+.boxes-results-final__box-result {
+    @include all-center-flex;
+}
+
+.boxes-results-final__box-result--white {
+    color: rgba($warm-gray, 0.4);
+    background-color: $gray-plus-3;
+    box-shadow: $boxes-shadow;
+}
+
+.color-white {
+    color: $just-white;
 }
 
 .hidden {
@@ -49,22 +75,36 @@
     display: grid;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .results-boxes-container {
-    @extend .insert-dimensions__tables-container;
+    @extend .boxes-data-container;
 }
 
 .result-box {
-    @extend .insert-dimensions__box;
+    @extend .boxes-data-input--white;
     background-color: $just-white;
     box-shadow: $boxes-shadow;
 }
 
-.insert-dimensions__box-title--black {
+.boxes-data-input--white-title--black {
     color: $warm-black;
 }
 
 .insert-dimensions__results {
-    @extend .insert-dimensions__input;
+    @extend .boxes-data-input__input;
     color: rgba($warm-gray, 0.4);
     margin-block-start: 1.2rem;
     border: 0.1rem solid $bitcoin-orange;
