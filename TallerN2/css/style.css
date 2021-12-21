@@ -237,7 +237,7 @@ svg {
             margin-block-start: 1.65rem;
 }
 
-.boxes-data-container, .results-boxes-container {
+.boxes-data-container {
     display: -ms-grid;
     display: grid;
     grid-template-columns: repeat(auto-fit, 24rem);
@@ -255,7 +255,7 @@ svg {
     border-radius: 0.8rem;
 }
 
-.boxes-data-input--white, .result-box {
+.boxes-data-input--white {
     background-color: #FFFFFF;
     -webkit-box-shadow: 0rem 0.4rem 0.8rem rgba(89, 73, 30, 0.16);
             box-shadow: 0rem 0.4rem 0.8rem rgba(89, 73, 30, 0.16);
@@ -267,7 +267,7 @@ svg {
             margin-block-start: 1.2rem;
 }
 
-.boxes-data-input__input, .insert-dimensions__results,
+.boxes-data-input__input,
 .boxes-results-final__box-result {
     font-weight: 500;
     font-size: 2rem;
@@ -277,19 +277,19 @@ svg {
     padding: 0 1.2rem;
     border-radius: 0.8rem;
 }
-.boxes-data-input__input::-webkit-input-placeholder, .insert-dimensions__results::-webkit-input-placeholder, .boxes-results-final__box-result::-webkit-input-placeholder {
+.boxes-data-input__input::-webkit-input-placeholder, .boxes-results-final__box-result::-webkit-input-placeholder {
     color: rgba(186, 186, 186, 0.4);
 }
-.boxes-data-input__input::-moz-placeholder, .insert-dimensions__results::-moz-placeholder, .boxes-results-final__box-result::-moz-placeholder {
+.boxes-data-input__input::-moz-placeholder, .boxes-results-final__box-result::-moz-placeholder {
     color: rgba(186, 186, 186, 0.4);
 }
-.boxes-data-input__input:-ms-input-placeholder, .insert-dimensions__results:-ms-input-placeholder, .boxes-results-final__box-result:-ms-input-placeholder {
+.boxes-data-input__input:-ms-input-placeholder, .boxes-results-final__box-result:-ms-input-placeholder {
     color: rgba(186, 186, 186, 0.4);
 }
-.boxes-data-input__input::-ms-input-placeholder, .insert-dimensions__results::-ms-input-placeholder, .boxes-results-final__box-result::-ms-input-placeholder {
+.boxes-data-input__input::-ms-input-placeholder, .boxes-results-final__box-result::-ms-input-placeholder {
     color: rgba(186, 186, 186, 0.4);
 }
-.boxes-data-input__input::placeholder, .insert-dimensions__results::placeholder,
+.boxes-data-input__input::placeholder,
 .boxes-results-final__box-result::placeholder {
     color: rgba(186, 186, 186, 0.4);
 }
@@ -340,39 +340,6 @@ svg {
 .visible {
     display: -ms-grid;
     display: grid;
-}
-
-.result-box {
-    background-color: #FFFFFF;
-    -webkit-box-shadow: 0rem 0.4rem 0.8rem rgba(89, 73, 30, 0.16);
-            box-shadow: 0rem 0.4rem 0.8rem rgba(89, 73, 30, 0.16);
-}
-
-.boxes-data-input--white-title--black {
-    color: #201E1C;
-}
-
-.insert-dimensions__results {
-    color: rgba(186, 186, 186, 0.4);
-    -webkit-margin-before: 1.2rem;
-            margin-block-start: 1.2rem;
-    border: 0.1rem solid #F7931A;
-    background-color: #FAF8F7;
-    -webkit-box-shadow: none;
-            box-shadow: none;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-}
-
-.insert-dimensions__results--black {
-    color: #201E1C;
 }
 
 .main__subtotal-cupon-container {
@@ -452,137 +419,4 @@ svg {
     bottom: calc(100% - 2.25rem);
     left: calc(50% - 2.25rem);
     width: 4.5rem;
-}
-
-.main__figure-selector-container {
-    width: 100%;
-    height: 27.5rem;
-    padding: 5.2rem 1.2rem;
-}
-
-.main__box-figures-label {
-    position: relative;
-}
-
-.main__box-figures-input {
-    position: absolute;
-    z-index: 1;
-    width: 10.4rem;
-    height: 10.9rem;
-    opacity: 0;
-}
-
-.main__figure-selector {
-    display: -ms-grid;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 10.4rem);
-    -ms-grid-rows: 10.9rem;
-    grid-template-rows: 10.9rem;
-    gap: 1.2rem;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    width: 100%;
-    height: 100%;
-    overflow-y: auto;
-}
-
-.main__box-figures-container {
-    display: -ms-grid;
-    display: grid;
-    justify-items: center;
-    -webkit-box-align: space-between;
-        -ms-flex-align: space-between;
-            align-items: space-between;
-    gap: 1.6rem;
-    padding: 1.2rem 0;
-    border: 0.1rem solid #BABABA;
-    border-radius: 0.8rem;
-    -webkit-box-shadow: 0rem 0.4rem 0.8rem rgba(89, 73, 30, 0.16);
-            box-shadow: 0rem 0.4rem 0.8rem rgba(89, 73, 30, 0.16);
-    -webkit-transition-property: all;
-    transition-property: all;
-    -webkit-transition-duration: 400ms;
-            transition-duration: 400ms;
-}
-
-.main__box-figures-input:checked + .main__box-figures-container {
-    color: #FFFFFF;
-    border-color: #F7931A;
-    background-color: #F7931A;
-    -webkit-transition-property: all;
-    transition-property: all;
-    -webkit-transition-duration: 400ms;
-            transition-duration: 400ms;
-}
-
-.main__insert-dimensions {
-    display: -ms-grid;
-    display: grid;
-    position: relative;
-    padding: 5.2rem 2.8rem 3.2rem;
-    text-align: center;
-    color: #F7931A;
-    background-color: #201E1C;
-}
-
-.main__cube3d {
-    position: absolute;
-    bottom: calc(100% - 2.0005rem);
-    right: calc(50% - 1.75rem);
-    width: 3.5rem;
-    height: 4.001rem;
-}
-
-.insert-dimensions__title {
-    -webkit-margin-after: 3.2rem;
-            margin-block-end: 3.2rem;
-}
-
-.insert-dimensions__select-figure {
-    -webkit-margin-after: 1.6rem;
-            margin-block-end: 1.6rem;
-    color: #FFFFFF;
-}
-
-.insert-dimensions__title--calculate {
-    margin: 1.6rem 0;
-}
-
-.insert-dimensions__form-calculate-dimentions {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    gap: 3.2rem;
-    width: 100%;
-}
-
-.insert-dimensions__calculate-dimentions {
-    font-size: 2.6rem;
-    color: #FFFFFF;
-    width: 13.6rem;
-    padding: 1.2rem;
-    border-radius: 0.8rem;
-    background-color: #F7931A;
-}
-.insert-dimensions__calculate-dimentions:active {
-    background-color: #b96f13;
-}
-
-.main__results {
-    text-align: center;
-    padding: 5.2rem 4.4rem 2rem;
-}
-
-.results__title {
-    -webkit-margin-after: 2.8rem;
-            margin-block-end: 2.8rem;
-}
-
-.results__clasify {
-    -webkit-margin-before: 2rem;
-            margin-block-start: 2rem;
 }

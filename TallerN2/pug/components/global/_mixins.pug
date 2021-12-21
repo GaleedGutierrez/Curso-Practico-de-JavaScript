@@ -42,10 +42,10 @@ mixin buttons-call-to-action-gral(forLabel, valueInput, onclickInput)
     label(for=forLabel).buttons-call-to-action-gral__label.cupons__buttons-label
         input(type="ratio", value=valueInput, id=forLabel, onclick=onclickInput).buttons-call-to-action-gral__input.cupons__buttons-input
 
-mixin buttons-cupons(numberCupon, forLabel, valueInput, onclickInput)
+mixin buttons-cupons(numberCupon, idInput, forLabelName, valueInput, onclickInput)
     .cupons__button-container
-        label(for=forLabel).buttons-call-to-action-gral__label.cupons__buttons-label
-            input(type="radio", name=forLabel, value=valueInput, id=forLabel, onclick=onclickInput).buttons-call-to-action-gral__input.cupons__buttons-input
+        label(for=forLabelName).buttons-call-to-action-gral__label.cupons__buttons-label
+            input(type="radio", name=forLabelName, value=valueInput, id=idInput, onclick=onclickInput).buttons-call-to-action-gral__input.cupons__buttons-input
             p.cupons__cupon-1.buttons-cupon=numberCupon
 
 mixin boxes-results-final(title, idP)

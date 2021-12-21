@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/../css/style.css"/>
-    <title>Figuras geométricas</title>
+    <title>Precios y descuentos</title>
   </head>
   <body>
     <header class="header">
@@ -27,7 +27,7 @@
             <h3 class="boxes-data-input-title boxes-data-input-title--black">Subtotal</h3>
             <form class="boxes-data-input__form" action="" onsubmit="return false"> 
               <label class="boxes-data-input__label" for="subtotal-input"> 
-                <input class="boxes-data-input__input--orange boxes-data-input__input" type="number" name="subtotal-input" id="subtotal-input" placeholder="Precio"/>
+                <input class="boxes-data-input__input--orange boxes-data-input__input" type="number" name="subtotal-input" id="subtotal-input" placeholder="Precio" required="required"/>
               </label>
             </form>
           </div>
@@ -40,7 +40,7 @@
             <h3 class="boxes-data-input-title boxes-data-input-title--black">Cupon</h3>
             <form class="boxes-data-input__form" action="" onsubmit="return false"> 
               <label class="boxes-data-input__label" for="cupon-input"> 
-                <input class="boxes-data-input__input--orange boxes-data-input__input" type="text" name="cupon-input" id="cupon-input" placeholder="TO1"/>
+                <input class="boxes-data-input__input--orange boxes-data-input__input" type="text" name="cupon-input" id="cupon-input" placeholder="TO1" required="required"/>
               </label>
             </form>
           </div>
@@ -48,49 +48,49 @@
         <div class="cupons__buttons-container">
           <div class="cupons__button-container">
             <label class="buttons-call-to-action-gral__label cupons__buttons-label" for="cupon">
-              <input class="buttons-call-to-action-gral__input cupons__buttons-input" type="radio" name="cupon" value="1" id="cupon" onclick=""/>
+              <input class="buttons-call-to-action-gral__input cupons__buttons-input" type="radio" name="cupon" value="TO10" id="cupon-1" onclick="cuponTOSelected()"/>
               <p class="cupons__cupon-1 buttons-cupon">TO10</p>
             </label>
           </div>
           <div class="cupons__button-container">
             <label class="buttons-call-to-action-gral__label cupons__buttons-label" for="cupon">
-              <input class="buttons-call-to-action-gral__input cupons__buttons-input" type="radio" name="cupon" value="2" id="cupon" onclick=""/>
+              <input class="buttons-call-to-action-gral__input cupons__buttons-input" type="radio" name="cupon" value="TO20" id="cupon-2" onclick="cuponTOSelected()"/>
               <p class="cupons__cupon-1 buttons-cupon">TO20</p>
             </label>
           </div>
           <div class="cupons__button-container">
             <label class="buttons-call-to-action-gral__label cupons__buttons-label" for="cupon">
-              <input class="buttons-call-to-action-gral__input cupons__buttons-input" type="radio" name="cupon" value="3" id="cupon" onclick=""/>
+              <input class="buttons-call-to-action-gral__input cupons__buttons-input" type="radio" name="cupon" value="TO30" id="cupon-3" onclick="cuponTOSelected()"/>
               <p class="cupons__cupon-1 buttons-cupon">TO30</p>
             </label>
           </div>
           <div class="cupons__button-container">
             <label class="buttons-call-to-action-gral__label cupons__buttons-label" for="cupon">
-              <input class="buttons-call-to-action-gral__input cupons__buttons-input" type="radio" name="cupon" value="4" id="cupon" onclick=""/>
+              <input class="buttons-call-to-action-gral__input cupons__buttons-input" type="radio" name="cupon" value="TO40" id="cupon-4" onclick="cuponTOSelected()"/>
               <p class="cupons__cupon-1 buttons-cupon">TO40</p>
             </label>
           </div>
           <div class="cupons__button-container">
             <label class="buttons-call-to-action-gral__label cupons__buttons-label" for="cupon">
-              <input class="buttons-call-to-action-gral__input cupons__buttons-input" type="radio" name="cupon" value="5" id="cupon" onclick=""/>
+              <input class="buttons-call-to-action-gral__input cupons__buttons-input" type="radio" name="cupon" value="TO50" id="cupon-5" onclick="cuponTOSelected()"/>
               <p class="cupons__cupon-1 buttons-cupon">TO50</p>
             </label>
           </div>
           <div class="cupons__button-container">
             <label class="buttons-call-to-action-gral__label cupons__buttons-label" for="cupon">
-              <input class="buttons-call-to-action-gral__input cupons__buttons-input" type="radio" name="cupon" value="6" id="cupon" onclick=""/>
+              <input class="buttons-call-to-action-gral__input cupons__buttons-input" type="radio" name="cupon" value="TO60" id="cupon-6" onclick="cuponTOSelected()"/>
               <p class="cupons__cupon-1 buttons-cupon">TO60</p>
             </label>
           </div>
           <div class="cupons__button-container">
             <label class="buttons-call-to-action-gral__label cupons__buttons-label" for="cupon">
-              <input class="buttons-call-to-action-gral__input cupons__buttons-input" type="radio" name="cupon" value="7" id="cupon" onclick=""/>
+              <input class="buttons-call-to-action-gral__input cupons__buttons-input" type="radio" name="cupon" value="TO70" id="cupon-7" onclick="cuponTOSelected()"/>
               <p class="cupons__cupon-1 buttons-cupon">TO70</p>
             </label>
           </div>
           <div class="cupons__button-container">
             <label class="buttons-call-to-action-gral__label cupons__buttons-label" for="cupon">
-              <input class="buttons-call-to-action-gral__input cupons__buttons-input" type="radio" name="cupon" value="8" id="cupon" onclick=""/>
+              <input class="buttons-call-to-action-gral__input cupons__buttons-input" type="radio" name="cupon" value="TO80" id="cupon-8" onclick="cuponTOSelected()"/>
               <p class="cupons__cupon-1 buttons-cupon">TO80</p>
             </label>
           </div>
@@ -109,5 +109,7 @@
     <footer class="footer">
       <p class="footer__creator">Creado por Galeed Gutierrez</p>
     </footer>
+    <script src="../js/descuentos.js"> </script>
+    <script src="../js/calculateDiscount.js"> </script>
   </body>
 </html>
