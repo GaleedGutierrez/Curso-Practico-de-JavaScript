@@ -44,7 +44,7 @@ let list1 = [
     33,
     3,
     2
-]
+];
 
 list1 = organizeIncresingOrder(list1);
 
