@@ -1,5 +1,6 @@
 function calculateArithmeticMean(list) {
-    const sumList = list.reduce((previusValue, currentValue) => previusValue + currentValue);
+    const accumulate =  (accumulator, currentValue) => accumulator + currentValue;
+    const sumList = list.reduce(accumulate, 0);
     const averageList = sumList / list.length;
 
     return averageList;
