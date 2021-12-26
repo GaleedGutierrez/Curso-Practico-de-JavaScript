@@ -1,14 +1,19 @@
-function calculateArithmeticMean(list) {
-    const sumList = list.reduce((previusValue, currentValue) => previusValue + currentValue);
-    const averageList = sumList / list.length;
-
-    return averageList;
-}
+// Functions helpers or utils
+const orderSmallestLargest = (firstElement, secondElement) => firstElement - secondElement;
 
 function isElementEven(element) {
     return (element % 2 === 0)
 }
 
+function calculateArithmeticMean(list) {
+    const accumulate =  (accumulator, currentValue) => accumulator + currentValue;
+    const sumList = list.reduce(accumulate, 0);
+    const averageList = sumList / list.length;
+
+    return averageList;
+}
+
+// Calculate of the median salaries
 function medianSalaries(lista) {
     const halfList = Math.floor(lista.length / 2);
     let personMiddle = 0;
@@ -28,9 +33,19 @@ function medianSalaries(lista) {
     return median;
 }
 
-const salariesArg = argentina.map((person) => person.salary);
-const ordernalySalaries = salariesArg.sort((previusSalary, currentSalary) => previusSalary - currentSalary);
+const salariesArg = argentina.map(({salary}) => salary);
+const ordernalySalaries = salariesArg.sort(orderSmallestLargest);
 
-console.group("Mediana:");
-console.log(medianSalaries(ordernalySalaries))
+//Calculate of the median salaries top 10%
+const spliceStart = ordernalySalaries.length * 90 / 100;
+// const spliceCount = ordernalySalaries.length - spliceStart;
+const Top10Argentina = ordernalySalaries.slice(spliceStart);
+
+
+
+const medinaGlobalArgentina = medianSalaries(ordernalySalaries);
+const medinaTop10Argentina = medianSalaries(Top10Argentina);
+
+console.group("Resultados:");
+console.log({medinaGlobalArgentina, medinaTop10Argentina});
 console.groupEnd();

@@ -42,7 +42,6 @@ function isArrayEven(numbers) {
 }
 
 function calculateMode(subjects) {
-    let mode = [];
     let counter = 0;
     const numbersStorage = {}
     for (const subject of subjects) {
@@ -57,8 +56,12 @@ function calculateMode(subjects) {
     const orderlyNumbers = numbersArray.sort((previusNumber, currentNumber) => previusNumber[1] - currentNumber[1]);
     const finalNumber = orderlyNumbers.length - 1;
 
-    for (let i = finalNumber; orderlyNumbers[finalNumber][1] === orderlyNumbers[i][1]; i--)
-        mode.push(orderlyNumbers[i]);
+    const mode = orderlyNumbers.filter(
+        function (number, _, orderlyNumbers) {
+            if (orderlyNumbers[finalNumber][1] === number[1]) 
+                return number;
+        }
+    );
 
     return mode;
 }
